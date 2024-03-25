@@ -1,0 +1,15 @@
+.todo{
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    border-top: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-text{
+    font-size: 12px;
+    letter-spacing: -0.17px;
+    color: #494c6b;
+}

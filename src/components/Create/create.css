@@ -13,8 +13,10 @@
   border-radius: 50%;
   border: solid 1px #e3e4f1;
   margin-left: 6px;
+  cursor: pointer;
 }
 
 input {
   border: none;
+  width: 100%;
 }

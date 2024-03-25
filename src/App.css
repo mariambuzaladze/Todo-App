@@ -17,3 +17,10 @@
   gap: 40px;
   align-items: center;
 }
+
+.todos{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 5px;
+}

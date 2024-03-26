@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header>
       <h1>TODO</h1>
-      <img src={Moon} alt="theme icon" />
+      <img className="theme" src={Moon} alt="theme icon" />
     </header>
   );
 }

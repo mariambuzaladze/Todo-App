@@ -12,6 +12,15 @@
     font-size: 12px;
     letter-spacing: -0.17px;
     color: #494c6b;
+    cursor:pointer
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.cross{
+    cursor: pointer;
 }
 
 @media screen and (min-width:750px) {

@@ -12,7 +12,7 @@ export default function Todo(){
     
 
     return <div className="todo">
-        <div onClick={circleClicked} className="circle" style={clicked ? { backgroundImage: `url(${Check})` } : {}}></div>
+        <div onClick={circleClicked} className="circle" style={clicked ? { backgroundImage: `url(${Check}), linear-gradient(135deg, #5df, #c058f3)`, backgroundRepeat: "no-repeat", backgroundPosition :"center" } : {}}></div>
         <p className="todo-text">Complete online JavaScript course</p>
         <img src={Cross} alt="icon cross" />
     </div>

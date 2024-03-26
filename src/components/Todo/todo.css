@@ -3,7 +3,7 @@
     padding: 20px;
     width: 100%;
     background-color: #fff;
-    border-top: 5px;
+    border-radius: 5px;
     align-items: center;
     justify-content: space-between;
 }
@@ -12,4 +12,16 @@
     font-size: 12px;
     letter-spacing: -0.17px;
     color: #494c6b;
+}
+
+@media screen and (min-width:750px) {
+    .todo-text{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .todo-text{
+        font-size: 18px;
+    }
 }

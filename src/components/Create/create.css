@@ -20,3 +20,10 @@ input {
   border: none;
   width: 100%;
 }
+
+@media screen and (min-width:1440px){
+  .circle{
+    width: 24px;
+    height: 24px;
+  }
+}

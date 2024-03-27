@@ -2,9 +2,9 @@ import "./todo.css";
 import Cross from "/images/icon-cross.svg";
 import Check from "/images/icon-check.svg";
 
-export default function Todo({ todo, toggleTodo, removeTodo }) {
+export default function Todo({ todo, toggleTodo, removeTodo, theme }) {
   return (
-    <div className="todo">
+    <div className="todo" style={theme === "dark"? {backgroundColor:"#25273d"}:{}}>
       <div
         onClick={() => toggleTodo(todo.id)}
         className="circle"

@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import Header from "./components/Header/Header";
 import Create from "./components/Create/Create";
 import Filters from "./components/Filters/Filters";
-import Reorder from "./components/Reorder/Reorder";
+import ReorderText from "./components/ReorderText/ReorderText";
 import Todo from "./components/Todo/Todo";
 import "./App.css";
+import { Reorder } from "framer-motion"
 
 function App() {
   const [userInput, setUserInput] = useState("");
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState('all');
-  const [theme,setTheme] = useState("ligth")
+  const [theme,setTheme] = useState("light")
 
   const addTodo = (todoText) => {
     setTodos([...todos, { id: Date.now(), text: todoText, completed: false }]);
@@ -47,10 +48,10 @@ function App() {
   };
   
   const changeTheme = ()=>{
-    if(theme==="ligth"){
+    if(theme==="light"){
       setTheme("dark");
     }else{
-      setTheme("ligth");
+      setTheme("light");
     }
   }
 
@@ -60,7 +61,9 @@ function App() {
       <div className="container">
         <Create theme={theme} userInput={userInput} setUserInput={setUserInput} addTodo={addTodo} />
         <div className="todos">
+          <Reorder.Group values={todos} onReorder={setTodos}>
           {filterTodos(todos).map(todo => (
+            <Reorder.Item style={{"listStyle":"none"}} value={todo} key={todo.id}>
             <Todo
             theme={theme}
               key={todo.id}
@@ -68,7 +71,9 @@ function App() {
               toggleTodo={toggleTodo}
               removeTodo={removeTodo}
             />
+            </Reorder.Item>
           ))}
+         </Reorder.Group>
           <div className="info" style={theme === "dark"? {backgroundColor:"#25273d"}:{}}>
             <p className="info-text">{todos.filter(todo => !todo.completed).length} items left</p>
             <p className="info-text" onClick={clearCompletedTodos}>Clear Completed</p>
@@ -76,7 +81,7 @@ function App() {
         </div>
         <Filters theme={theme} filter={filter} setFilter={setFilter} />
       </div>
-      <Reorder />
+      <ReorderText />
     </div>
   );
 }

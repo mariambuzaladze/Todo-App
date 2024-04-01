@@ -6,7 +6,7 @@ export default function Header({changeTheme,theme}) {
   return (
     <header>
       <h1>TODO</h1>
-      <img onClick={changeTheme} className="theme" src={theme === "ligth"?Moon:Sun} alt="theme icon" />
+      <img onClick={changeTheme} className="theme" src={theme === "light"?Moon:Sun} alt="theme icon" />
     </header>
   );
 }

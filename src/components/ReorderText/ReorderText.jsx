@@ -1,5 +1,5 @@
-import "./reorder.css"
+import "./reorderText.css"
 
-export default function Reorder(){
+export default function ReorderText(){
     return <p className="reorder">Drag and drop to reorder list</p>
 }

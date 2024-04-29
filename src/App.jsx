@@ -11,7 +11,9 @@ function App() {
   const [userInput, setUserInput] = useState("");
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState('all');
-  const [theme,setTheme] = useState("light")
+  const [theme,setTheme] = useState("light");
+
+
 
   const addTodo = (todoText) => {
     setTodos([...todos, { id: Date.now(), text: todoText, completed: false }]);
@@ -50,8 +52,10 @@ function App() {
   const changeTheme = ()=>{
     if(theme==="light"){
       setTheme("dark");
+      document.getElementById('root').style.setProperty('background-color', "#171823");
     }else{
       setTheme("light");
+      document.getElementById('root').style.setProperty('background-color', "#fafafa");
     }
   }
 

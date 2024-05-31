@@ -5,10 +5,15 @@
 ## Features  
 
 Add Todos: Easily add new todos to your list.  
+
 Delete Todos: Remove todos you no longer need.  
+
 Filter Todos: Filter todos based on whether they are completed or not.  
+
 Mark Completed: Mark todos as completed when you're finished with them.  
+
 Drag and Drop: Reorder todos by dragging and dropping them.  
+
 Switch Themes: Change the app's appearance with different themes.  
 
 
